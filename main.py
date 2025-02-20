@@ -9,7 +9,7 @@ model = TumorClassifierb4(num_classes=2)
 model.load_state_dict(torch.load('40X.pth'))
 model.eval()
 
-input_folder = 'BreaKHis_v1-data-for-use/testing/40X/benign' #Path to folder containing images for analysis
+input_folder = '' #Path to folder containing images for analysis
 image_files = [f for f in os.listdir(input_folder) if f.endswith(('.png', '.jpg', '.jpeg'))]
 class_labels = ["Benign", "Malignant"]
 output_file = "predictions.txt"
